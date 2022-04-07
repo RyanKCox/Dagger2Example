@@ -5,6 +5,7 @@ import com.example.android.dagger.login.LoginActivity
 import com.example.android.dagger.login.LoginComponent
 import com.example.android.dagger.main.MainActivity
 import com.example.android.dagger.registration.RegistrationActivity
+import com.example.android.dagger.registration.RegistrationComponent
 import com.example.android.dagger.registration.enterdetails.EnterDetailsFragment
 import com.example.android.dagger.registration.termsandconditions.TermsAndConditionsFragment
 import com.example.android.dagger.settings.SettingsActivity
@@ -22,15 +23,17 @@ interface AppComponent {
         fun create(@BindsInstance context: Context):AppComponent
     }
 
-    fun injection(activity:RegistrationActivity)
+    //fun injection(activity:RegistrationActivity)
 
     fun injection(activity:MainActivity)
+    //fun injection(activity: RegistrationActivity)
 
     fun settingsComponent():SettingsComponent.Factory
 
+    fun registrationComponent():RegistrationComponent.Factory
     fun loginComponent():LoginComponent.Factory
 
-    fun injection(fragment:EnterDetailsFragment)
-    fun injection(fragment:TermsAndConditionsFragment)
+//    fun injection(fragment:EnterDetailsFragment)
+//    fun injection(fragment:TermsAndConditionsFragment)
 
 }
